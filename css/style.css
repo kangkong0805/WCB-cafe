@@ -54,19 +54,23 @@ img{
     background-color: #fff;
     z-index: 1;
 }
-.wrapper:not(.page-header){
+.wrapper:not(.page-header, .home-content){
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 4%;
+    margin-top: 70px;
 }
 
 /*  HOME
 ----------------------------------*/
 .home-content{
-    background-image: url(../images/Tree.jpg);
-    min-height: 2000px;
+    background-image: url(../images/block02_bg.jpg);
+    background-size: cover;
     background-position: bottom;
-    background-size: 90%;
+    width: 100%;
+    height: 500px;
+    /* background-position: bottom; */
+    /* background-size: 60%; */
     padding-top: 6rem;
     padding-bottom: 10px;
     /* padding-bottom: 60rem; */
@@ -79,13 +83,7 @@ img{
 }
 
 /* 제목 */
-.page-title{
-    font-size: 3rem;
-    font-family: 'Philosopher', serif;
-    text-transform: uppercase;
-    font-weight: normal;
-    margin-top: 92px;
-}
+ 
 
 /* 버튼 */
 .button{
@@ -116,12 +114,41 @@ img{
 /* NEWS
 -----------------------------------------------------------*/
 #news{
-    background-image: url(../images/company_visual.jpg);
-    height: 270px;
+    background: url(../images/company_visual.jpg) no-repeat center;
+    background-size: cover;
     margin-bottom: 40px;
+    height: 300px;
 }
 #news .page-title{
+    font-size: 2.8rem;
+    font-family: 'Philosopher', serif;
+    font-weight: bold;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 7vh;
+    color: #000;
+
+    position: absolute;
     text-align: center;
+    left: 0;
+    right: 0;
+    /* top: 0; */
+}
+
+#news .page-text{
+    text-align: center;
+    color: rgba(142, 142, 142);
+    /* margin-top: 100px; */
+}
+
+.page-text{
+    position: absolute;
+    font-size:1.1rem;
+    margin: 10px 0 0;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-top: 165px;
 }
 
 /* footer
@@ -138,7 +165,7 @@ footer p{
 
 /* 기사 부분 */
 article{
-    width: 74%;
+    width: 100%;
 }
 
 /* 사이드바 */
@@ -148,7 +175,7 @@ aside{
 
 .news-contents{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-bottom: 50px;
 }
 
@@ -190,19 +217,49 @@ aside{
     margin-left: 120px;
 }
 
-article h3{
-    font-size: 20p;
+/* 본 내용 */
+article li{
+    /* position: relative; */
+    list-style: none;
+    display: table;
 }
 
-article img{
+.about_img{
+    left: 0;
+    display: block;
+    position: relative;
+    float: left;
     margin-bottom: 20px;
-    /* float: left; */
+}
+
+.about_text{
+    margin-top: 40px;
+    width: 400px;
+    height: 250px;
+    right: 0;
+    display: block;
+    position: relative;
+    float: right;
+}
+
+article h3{
+    font-size: 20px;
+    position: relative;
+}
+
+article span{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 1px;
+    background-color:#000;
 }
 
 article p{
     margin-bottom: 1rem;
     font-size: 13px;
-    /* float: right; */
+    position: absolute;
 }
 
 .sub-title{
@@ -290,21 +347,20 @@ aside p{
 /* MENU
 -----------------------------------*/
 #menu{
-    background-image: url(../images/menu-bg.jpg);
-    min-height: 50vh;
+    background-image: url(../images/menu_intro_visual.jpg);
+    background-size: cover;
+    min-height: 93vh;
+    /* bottom: 0; */
+    z-index: 1;
 }
 .menu-content{
     max-width: 560px;
     margin-top: 10%;
-    
+    color: #fff;
 }
 
-.page-title{
-    text-align: center;
-}
-.menu-content p{
-    font-size:1.125rem;
-    margin: 10px 0 0;
+#menu .page-text{
+    margin-top: 42vh;
 }
 
 .grid{
